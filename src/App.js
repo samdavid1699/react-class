@@ -1,24 +1,45 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Apple from './Apple';
+import Black from './Black';
+import Welcome from './Welcome';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const color = "Green";
+  const colorList=[
+    {color:"red",msg:"One"},
+      {color:"green",msg:"Two"},
+          {color:"blue",msg:"Three"},
+              {color:"white",msg:"Four"},
+  ];
+  const fruits =["Apple", "Banana", "Orange"];
+  
+  
+  return (<>
+  {/* {colorList.map(())} */}
+
+<ul>
+{fruits.map((fruit, index)=>(
+  <li key={index}>{fruit}</li>
+))}
+
+
+</ul>
+
+<ul>
+  {colorList.map((color,msg,index)=>(
+    <li>hi my color is{color.color} and my number is {color.msg}</li>
+  ))}
+</ul>
+
+<Apple color={color}/>
+
+
+
+  </>
+
+
   );
 }
 

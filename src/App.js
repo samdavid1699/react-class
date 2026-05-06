@@ -24,7 +24,6 @@ function App() {
   <li key={index}>{fruit}</li>
 ))}
 
-
 </ul>
 
 <ul>

@@ -1,40 +1,42 @@
 
+import { useState } from 'react';
 import './App.css';
-import Apple from './Apple';
-import Black from './Black';
-import Welcome from './Welcome';
+
 
 
 function App() {
-  const color = "Green";
-  const colorList=[
-    {color:"red",msg:"One"},
-      {color:"green",msg:"Two"},
-          {color:"blue",msg:"Three"},
-              {color:"white",msg:"Four"},
-  ];
-  const fruits =["Apple", "Banana", "Orange"];
   
-  
+  // let color= " Red";
+ 
+//   const [color, setColor]=useState("White")
+// const [model,setmodel]=useState("Nexon");
+//   const [brand,setbrand]=useState("TATA");
+//   const [year,setyear]=useState("2023");
+//   const [fuel,setfuel]=useState("Petrol");
+
+const [car,setcar]=useState({
+  color:"white",
+  model:"Nexon",
+  brand:"TATA",
+  year:"2023",
+  fuel:"Petrol"
+});
+
+function updateCar(){
+  setcar(previousState=>{
+    return{...previousState,fuel:"Diesel"}})
+
+
+}
   return (<>
-  {/* {colorList.map(())} */}
-
-<ul>
-{fruits.map((fruit, index)=>(
-  <li key={index}>{fruit}</li>
-))}
-
-</ul>
-
-<ul>
-  {colorList.map((color,msg,index)=>(
-    <li>hi my color is{color.color} and my number is {color.msg}</li>
-  ))}
-</ul>
-
-<Apple color={color}/>
-
-
+  
+<h1> My Nexon </h1>
+<p>color: {car.color}</p>
+<p>model: {car.model}</p>
+<p>Brand: {car.brand}</p>
+<p>Year: {car.year}</p>
+<p>Fuel: {car.fuel}</p>
+<button onClick={updateCar} >click me</button>
 
   </>
 

@@ -8,8 +8,8 @@ export default function Game(){
     const choices=["Rock","Paper","Scissors"];
     const playGame=(choice)=>{
         const randomChoice= choices[Math.floor(Math.random()*3)]
-    }
-    setuserChoice(choices);
+    
+    setuserChoice(choice);
     setcomputerChoice(randomChoice);
 
     if(choice === randomChoice){
@@ -25,8 +25,22 @@ export default function Game(){
          else {
             setResult("You Lose!!")
          }
+    }
+    
         
-
+ const style={
+        container:{
+            textAlign:"Center",
+            marginTop:"50px",
+            fontFamily:"Arial"
+        },
+        button:{
+            padding:"10px 20px",
+            margin:"5px",
+            fontSize:"16px",
+            cursor:"pointer"
+        },
+    }
     return(
         <>
         <div style={style.container} >
@@ -48,17 +62,5 @@ export default function Game(){
         </div>
         </>
     )
-    const style={
-        container:{
-            textAlign:"Center",
-            marginTop:"50px",
-            fontFamily:"Arial"
-        },
-        button:{
-            padding:"10px 20px",
-            margin:"5px",
-            fontSize:"16px",
-            cusrsor:"pointer"
-        },
-    }
+   
 };

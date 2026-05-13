@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Usercard } from './Usercard';
- import Fav from './Fav';
-import Game from './Game';
+// import { Usercard } from './Usercard';
+//  import Fav from './Fav';
+// import Game from './Game';
+import New from './New';
+import Count from './Count';
+import Form from './Form';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-<App/>
-<Fav/>
-<Game/>
+
+<Form/>
   </React.StrictMode>
 );
 

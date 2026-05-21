@@ -6,16 +6,20 @@ import reportWebVitals from './reportWebVitals';
 // import { Usercard } from './Usercard';
 //  import Fav from './Fav';
 // import Game from './Game';
-import New from './New';
-import Count from './Count';
-import Form from './Form';
+// import New from './New';
+// import Count from './Count';
+// import Form from './Form';
+
+
+import Username from './Username';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+<App/>
 
-<Form/>
   </React.StrictMode>
 );
 

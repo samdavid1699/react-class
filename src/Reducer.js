@@ -1,26 +1,18 @@
 const initialState = {
-  count: 0
+    todos: []
 };
 
-function counterReducer(state = initialState, action) {
+const todoReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case "ADD_TODO":
+            return {
+                ...state,
+                todos: [...state.todos, action.payload]
+            };
 
-  switch(action.type){
+        default:
+            return state;
+    }
+};
 
-    case "INCREMENT":
-      return {
-        ...state,
-        count: state.count + 1
-      };
-
-    case "DECREMENT":
-      return {
-        ...state,
-        count: state.count - 1
-      };
-
-    default:
-      return state;
-  }
-}
-
-export default counterReducer;
+export default todoReducer;

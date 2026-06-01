@@ -11,16 +11,24 @@ import reportWebVitals from './reportWebVitals';
 // import Form from './Form';
 
 
-import Username from './Username';
-import App from './App';
-
-
+// import Username from './Username';
+// import App from './App';
+import { Provider } from 'react-redux';
+import Store from './Store';
+// import Todo from './Todo';
+import Users from './Users';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-<App/>
+//   <React.StrictMode>
+// <App/>
 
-  </React.StrictMode>
+//   </React.StrictMode>
+<Provider store={Store}>
+{/* <App/> */}
+{/* <Todo/> */}
+<Users/>
+</Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

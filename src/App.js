@@ -1,7 +1,7 @@
 
 // import { useState } from 'react';
 import './App.css';
-
+import { useSelector,useDispatch } from 'react-redux';
 
 
 function App() {
@@ -43,6 +43,21 @@ function App() {
 
 //   );
 // }
+
+//Read the data from store
+const count =useSelector((state)=>state.count);
+
+//Sent the data
+const dispatch = useDispatch();
+return(
+  <div style={{textAlign:"center",marginTop:"50px"}}>
+<h1>Simple Redux App</h1>
+<h2>{count}</h2>
+<button onClick={()=> dispatch({type:"ADD"}) } >Add</button>
+
+  </div>
+)
+
 }
 
 export default App;
